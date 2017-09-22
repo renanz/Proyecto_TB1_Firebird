@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BC71D89-1D25-41F8-9638-384BABA5AA88}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mi_Cooperativa_App_VS</RootNamespace>
+    <AssemblyName>Mi_Cooperativa_App_VS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Firebird, Version=5.11.0.0, Culture=neutral, PublicKeyToken=42d22d092898e5f8, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Firebird.5.11.0\lib\net452\EntityFramework.Firebird.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=5.11.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.5.11.0\lib\net452\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abonos.cs" />
+    <Compile Include="Afiliado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Afiliado.Designer.cs">
+      <DependentUpon>Afiliado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cuenta.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="frmAbonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbonos.Designer.cs">
+      <DependentUpon>frmAbonos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuenta.Designer.cs">
+      <DependentUpon>frmCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamos.Designer.cs">
+      <DependentUpon>frmPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrivilegios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrivilegios.Designer.cs">
+      <DependentUpon>frmPrivilegios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoles.Designer.cs">
+      <DependentUpon>frmRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolesProvilegios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolesProvilegios.Designer.cs">
+      <DependentUpon>frmRolesProvilegios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuariosRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuariosRoles.Designer.cs">
+      <DependentUpon>frmUsuariosRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs" />
+    <Compile Include="Prestamos.cs" />
+    <Compile Include="Privilegios.cs" />
+    <Compile Include="Roles.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Cooperativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cooperativa.Designer.cs">
+      <DependentUpon>Cooperativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Afiliado.resx">
+      <DependentUpon>Afiliado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperativa.resx">
+      <DependentUpon>Cooperativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbonos.resx">
+      <DependentUpon>frmAbonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuenta.resx">
+      <DependentUpon>frmCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamos.resx">
+      <DependentUpon>frmPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrivilegios.resx">
+      <DependentUpon>frmPrivilegios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoles.resx">
+      <DependentUpon>frmRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolesProvilegios.resx">
+      <DependentUpon>frmRolesProvilegios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuariosRoles.resx">
+      <DependentUpon>frmUsuariosRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
